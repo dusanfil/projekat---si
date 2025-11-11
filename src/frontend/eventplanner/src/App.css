@@ -1,0 +1,79 @@
+body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100vw;
+  background: #1e1e2f;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+.layout-root {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  background: #1e1e2f;
+  box-sizing: border-box;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background: #1e1b2e;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+/* Main content desktop */
+.main-content {
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+  background: #1e1e2f;
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+  width: calc(100vw - 240px);
+}
+
+/* Main content kad sidebar NE postoji */
+.main-content.no-sidebar {
+  margin-left: 0 !important;
+  width: 100vw !important;
+}
+
+/* Responsive sidebar & content */
+@media (max-width: 800px) {
+  .sidebar {
+    width: 70px !important;
+    min-width: 70px !important;
+  }
+  .main-content {
+    margin-left: 70px !important;
+    width: calc(100vw - 70px) !important;
+    min-width: 0 !important;
+  }
+  .main-content.no-sidebar {
+    margin-left: 0 !important;
+    width: 100vw !important;
+  }
+}
+
+.main-content {
+  width: calc(100vw - 240px);
+}
+@media (max-width: 800px) {
+  .main-content {
+    width: calc(100vw - 70px) !important;
+  }
+}

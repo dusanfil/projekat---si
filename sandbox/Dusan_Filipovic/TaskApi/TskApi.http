@@ -1,0 +1,6 @@
+@TskApi_HostAddress = http://localhost:5076
+
+GET {{TskApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

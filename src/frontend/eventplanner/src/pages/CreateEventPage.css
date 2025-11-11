@@ -1,0 +1,232 @@
+/* Osnovna pozadina */
+.create-event-container {
+  background-color: #000A25; /**/
+  color: white;
+  min-height: 100vh;
+  padding: 2.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 240px;
+  width: calc(100vw - 240px);
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  .create-event-container {
+    margin-left: 70px !important;
+    width: calc(100vw - 70px) !important;
+    padding: 1.5rem !important;
+  }
+}
+
+/* Naslov */
+.create-event-container h4 {
+  color: white;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Dugmici */
+.btn-pink {
+  background-color: #B52956 !important;
+  border-color: #B52956 !important;
+  color: white;
+  transition: all 0.25s ease;
+  padding: 0.45rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Dodaj kartu & Dodaj napomenu */
+.btn-add {
+  background-color: #B52956;
+  border-color: #B52956;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-add:hover,
+.btn-add:focus {
+  background-color: #E94586;
+  border-color: #E94586;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(193, 53, 132, 0.4);
+}
+
+
+
+.btn-pink:hover,
+.btn-pink:focus {
+  background-color: #E94586 !important;
+  border-color: #E94586 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(193, 53, 132, 0.4);
+}
+
+/* Razmak između dugmadi */
+.button-group > * {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Sekcije (fieldset) */
+fieldset {
+  border: 1px solid #E94586;
+  border-radius: 12px;
+  padding: 1.5rem !important;
+  background: rgba(255, 255, 255, 0.02);
+  transition: box-shadow 0.3s ease;
+}
+
+fieldset:hover {
+  box-shadow: 0 0 12px rgba(193, 53, 132, 0.3);
+}
+
+legend {
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 0 0.5rem;
+  color: #B52956;
+}
+
+/* Koverat odeljaka za dan */
+.day-card {
+  border: 1px solid #E94586;
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin-bottom: 20px;
+  background: rgba(193, 53, 132, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.day-card:hover {
+  box-shadow: 0 0 10px rgba(193, 53, 132, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Naslovi dana */
+.day-card h6 {
+  color: #B52956;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Lista resursa i aktivnosti */
+.day-card ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  color: #f8f8f8;
+}
+
+/* Form kontrole */
+.form-control, .form-select {
+  background-color: #1F1B36;
+  border: 1px solid #E94586;
+  color: white;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.25s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #E94586;
+  box-shadow: 0 0 6px #E94586;
+  background-color: #1F1B36;
+  color: white;
+}
+
+.form-control.placeholder-light::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+  opacity: 1;
+}
+
+.form-control::placeholder{
+  color: rgba(255, 255, 255, 0.5) !important;
+  opacity: 1;
+}
+
+/* Labela */
+.form-label {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+/* Tooltip / error poruke */
+.error-message {
+  color: #ff6b81;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.success-message {
+  color: #90ee90;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* ===== MODAL: Bootstrap modal izmene ===== */
+/* Samo modal za uspešno kreiran događaj! */
+.success-modal .modal-content {
+  background: #fff !important;
+  color: #1b1230 !important;
+  border-radius: 12px;
+}
+
+.success-modal .modal-header,
+.success-modal .modal-title,
+.success-modal .modal-body,
+.success-modal .modal-footer {
+  color: #1b1230 !important;
+}
+
+.success-modal .btn-primary {
+  background-color: #B52956;
+  border-color: #B52956;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.success-modal .btn-primary:hover,
+.success-modal .btn-primary:focus {
+  background-color: #E94586;
+  border-color: #E94586;
+}
+
+/* Dugme Kreiraj Dogadjaj */
+.create-event-container .w-100 {
+  padding: 0.6rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+.create-event-container .w-100:hover {
+  background-color: #E94586 !important;
+  border-color: #E94586 !important;
+  box-shadow: 0 4px 10px rgba(193, 53, 132, 0.4);
+  transform: translateY(-1px);
+}
+
+.mt-2.btn-add:hover{
+  background: #E94586 !important;
+}
+
+/* Chrome/Edge/Safari */
+.dateInput::-webkit-calendar-picker-indicator {
+  color: white;
+}
+.dateInput {
+  color-scheme: dark !important;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+

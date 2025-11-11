@@ -1,0 +1,115 @@
+﻿############
+# OS Files #
+############
+.DS_Store
+Thumbs.db
+
+#########################
+# Build / Output Folders
+#########################
+bin/
+obj/
+out/
+artifacts/
+publish/
+wwwroot/
+
+##################
+# User Settings
+##################
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+########################
+# Logs & Coverage Files
+########################
+*.log
+*.coverage
+*.coveragexml
+*.trx
+TestResults/
+
+#############################
+# dotnet & NuGet Artifacts
+#############################
+*.dll
+*.exe
+*.pdb
+*.cache
+*.config
+*.db
+*.deps.json
+*.runtimeconfig.json
+
+.nuget/
+packages/
+*.nupkg
+*.snupkg
+
+#######################################
+# Rider / VS Code / JetBrains Settings
+#######################################
+.vscode/
+.idea/
+
+#################
+# Environment
+#################
+.env
+.env.*
+
+####################
+# MongoDB (optional)
+####################
+dump/
+*.mongo
+
+###################
+# Node (if present)
+###################
+node_modules/
+
+## Ignore build outputs
+bin/
+obj/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Rider & VSCode
+.idea/
+.vscode/
+*.sln.iml
+
+## OS-specific files
+.DS_Store
+Thumbs.db
+
+## ASP.NET specific
+wwwroot/lib/
+node_modules/
+dist/
+bower_components/
+
+## Environment settings
+.env
+
+## Logs and database
+*.log
+
+## Publish output
+publish/
+out/
+
+## Docker
+docker-compose.override.yml
+docker-compose.*.yml
+
+## Secrets (optional, if used)
+appsettings.Development.json
+appsettings.*.Secrets.json

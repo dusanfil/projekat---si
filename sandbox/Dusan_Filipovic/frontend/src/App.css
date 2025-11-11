@@ -1,0 +1,156 @@
+/* Globalni stilovi */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e9ecef; /* Dodajemo svetlu pozadinsku boju za celu stranicu */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Container za aplikaciju */
+div {
+  background-color: #ffffff;  /* Belo pozadinsko polje za aplikaciju */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Dodajemo veće senčenje */
+  max-width: 900px;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Naslov */
+h1 {
+  color: #4CAF50; /* Zeleni naslov */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+/* Stil za input polja */
+input[type="text"] {
+  padding: 15px;
+  margin: 15px 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+  background-color: #fafafa;  /* Svetlo siva pozadina unutar input polja */
+}
+
+input[type="text"]:focus {
+  border: 1px solid #4CAF50; /* Zelena boja pri fokusu */
+  outline: none;
+}
+
+/* Stil za dugme */
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 12px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049; /* Tamnija zelena kada se pređe mišem */
+}
+
+/* Lista taskova */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #ffffff;
+  margin: 12px 0;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Veće senčenje za kartice */
+  transition: box-shadow 0.3s ease;
+  font-size: 16px;
+}
+
+li:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Efekat pri hoveru */
+}
+
+li button {
+  background-color: #f44336; /* Crvena boja za dugme za brisanje */
+  color: white;
+  width: 80px;
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+li button:hover {
+  background-color: #d32f2f; /* Tamnija crvena prilikom hovera */
+}
+
+/* Dodavanje efekta na taskove koji su označeni kao zavrseni */
+li.completed {
+  text-decoration: line-through; /* Precrtavanje završenih taskova */
+  background-color: #e0e0e0; /* Pozadina zadatka postaje svetlosiva */
+  color: #999; /* Siva boja za tekst */
+}
+
+/* Animacija pri dodavanju novih taskova */
+li {
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsivni dizajn */
+@media screen and (max-width: 768px) {
+  div {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  input[type="text"], button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  li {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  li button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,133 @@
+/* Sidebar.css */
+
+/* Stil za logo sliku (logo2.png) */
+.custom-logo-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.sidebar {
+    background-color: #1a1e28;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80px;
+    margin-right: 15px;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-y: auto;
+    height: calc(100vh - 30px);
+    flex-shrink: 0;
+}
+
+.sidebar-top-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar li {
+    margin-bottom: 25px;
+}
+
+.sidebar-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease-in-out;
+    background-color: transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.sidebar-icon:not(.active):not(.logo-wrapper):hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-top-icons .top-icon:hover {
+    background-color: #ff4081; 
+}
+
+.sidebar-top-icons .top-icon:hover svg path[stroke] {
+    stroke: #FFFFFF; 
+}
+
+.sidebar-icon.active {
+    background-color: #ff4081; 
+    border: none;
+}
+
+.sidebar-icon svg path {
+    fill: #9FA6B2;
+    transition: fill 0.2s ease-in-out;
+}
+.sidebar-icon svg path[stroke] {
+    stroke: #9FA6B2;
+    fill: none;
+    transition: stroke 0.2s ease-in-out;
+}
+
+.sidebar-icon.active svg path {
+    fill: #FFFFFF;
+    stroke: none;
+}
+
+.sidebar-icon.active svg path[stroke] {
+    stroke: #FFFFFF;
+    fill: none;
+}
+
+.sidebar-top-icons .top-icon {
+    margin-bottom: 20px;
+}
+
+.sidebar-icon.logo-wrapper {
+    cursor: default;
+    pointer-events: none; 
+    background-color: transparent;
+}
+
+.sidebar .bottom-icon {
+    margin-top: 20px;
+}
+
+.sidebar.no-transitions .sidebar-icon,
+.sidebar.no-transitions .sidebar-icon *,
+.sidebar.no-transitions .sidebar-icon:hover,
+.sidebar.no-transitions .sidebar-icon.active {
+    transition: none !important; 
+}
+
+.sidebar-icon.top-icon.selected {
+  background:#ff4081 !important;
+}
+.sidebar-icon.top-icon.selected svg path {
+  stroke:#ffffff !important;
+}
+
+.sidebar.arrow-selected .sidebar-icon.active:not(.top-icon) {
+  background:transparent;   
+}
+.sidebar.arrow-selected .sidebar-icon.active:not(.top-icon) svg path {
+  fill:#9FA6B2;           
+  stroke:#9FA6B2;
+}

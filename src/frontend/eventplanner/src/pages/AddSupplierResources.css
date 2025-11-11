@@ -1,0 +1,178 @@
+.add-resource-page {
+  min-height: 100vh;
+  background: #000A25;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 16px 0 0 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  margin-left: 240px;
+}
+
+.add-resource-content {
+  background: #1F1B36;
+  border-radius: 18px;
+  padding: 40px 54px 32px 54px;
+  min-width: 380px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 4px 32px rgba(32,28,56,0.13);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- FORM CENTRALIZACIJA --- */
+.add-resource-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center; /* centrira form-row unutra */
+}
+
+.form-row {
+  width: 100%;
+  max-width: 320px; /* polja su uvek centralizovana i iste širine */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  align-items: center;
+}
+
+.form-row label {
+  color: #b3b3c6;
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+
+.form-input {
+  background: #000A25;
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  padding: 12px 14px;
+  font-size: 1.08rem;
+  font-weight: 500;
+  outline: none;
+  transition: box-shadow 0.2s, border 0.2s;
+  width: 100%;
+  max-width: 320px; /* polja uvek centralizovana */
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.form-input:focus {
+  box-shadow: 0 0 0 2px  #B52956;
+  border: 1px solid  #B52956;
+}
+
+.add-resource-title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 32px;
+  text-align: center;
+  text-shadow: 0 2px 16px #19182b, 0 0px 2px #d6336c44;
+}
+
+.add-resource-btn {
+  margin-top: 26px;
+  width: 100%;
+  max-width: 320px;
+  background:  #B52956;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.18rem;
+  font-weight: 700;
+  padding: 13px 0;
+  cursor: pointer;
+  transition: background 0.23s;
+  align-self: center;
+}
+
+.add-resource-btn:hover {
+  background: #B52956;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 650px) {
+  .add-resource-page {
+    margin-left: 70px; 
+    padding: 14px 0 0 0;
+    border: none !important;
+  }
+  .add-resource-content {
+    padding: 18px 6px 18px 6px;
+    min-width: unset;
+    max-width: 100vw;
+    border-radius: 0;
+    box-shadow: none;
+    align-items: stretch;
+  }
+  .add-resource-form {
+    align-items: center;
+  }
+  .form-row {
+    max-width: 98vw;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .form-input, .add-resource-btn {
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 650px) {
+  .supplier-sidebar {
+    border-right: none !important;
+  }
+}
+
+/* --- TABLET FIX: 651px - 1024px --- */
+@media (min-width: 651px) and (max-width: 1024px) {
+  .add-resource-page {
+    margin-left: 70px;
+    padding: 0;
+    display: flex;
+    justify-content: center;   
+    align-items: flex-start;
+    min-height: 100vh;
+    width: calc(100vw - 70px);
+  }
+  .add-resource-content {
+    min-width: 0;
+    max-width: 480px;
+    margin: 32px 0 0 0;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px rgba(32,28,56,0.13);
+    padding: 28px 0 36px 0;
+    align-items: center;
+    background: #232139;
+    width: 100%;
+  }
+  .add-resource-form {
+    flex-direction: column;
+    align-items: center;
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+    gap: 16px;
+  }
+  .form-row {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 8px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-input, .add-resource-btn {
+    max-width: 320px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,39 @@
+# Build outputs
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio files
+.vs/
+
+# ASP.NET Core environment files
+appsettings.*.json
+
+# Logs
+*.log
+
+# Publish output folder
+publish/
+
+# Rider IDE files (if used)
+.idea/
+
+# NuGet packages
+*.nupkg
+packages/
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# Temporary files
+*.tmp
+*.temp
+
+# Dotnet watch files
+.dotnet-watch/

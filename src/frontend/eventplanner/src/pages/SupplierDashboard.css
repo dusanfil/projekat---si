@@ -1,0 +1,302 @@
+.supplier-dashboard-page {
+  min-height: 100vh;
+  background: #000A25;
+  padding: 48px 0 0 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  margin-left:240px;
+}
+
+.supplier-dashboard-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.supplier-dashboard-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 36px;
+  letter-spacing: 0.5px;
+}
+
+.supplier-dashboard-filters {
+  display: flex;
+  width: 100%;
+  background: #232139;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+
+.supplier-dashboard-filter-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 22px;
+  border-right: 1px solid #2c2840;
+  color: #b0b0d0;
+  font-size: 1.14rem;
+  background: transparent;
+}
+
+.supplier-dashboard-filter-item:last-child {
+  border-right: none;
+}
+
+.supplier-dashboard-filter-icon {
+  font-size: 1.24rem;
+  color: #b0b0d0;
+}
+
+.supplier-dashboard-filter-input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.08rem;
+  outline: none;
+  width: 100%;
+}
+.supplier-dashboard-filter-input::placeholder {
+  color: #b0b0d0;
+  opacity: 0.7;
+}
+
+.supplier-dashboard-table-container {
+  width: 100%;
+  margin-top: 0;
+}
+
+.supplier-dashboard-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: transparent;
+}
+
+.supplier-dashboard-table th,
+.supplier-dashboard-table td {
+  padding: 16px 14px;
+  text-align: left;
+  color: #e2e2f2;
+}
+
+.supplier-dashboard-table th {
+  font-size: 1.04rem;
+  font-weight: 600;
+  color: #b3b3c6;
+  background: transparent;
+  border-bottom: 1px solid #28243c;
+}
+
+.supplier-dashboard-table-row {
+  background: #19182b;
+  border-radius: 12px;
+  box-shadow: 0 2px 9px rgba(32,28,56,0.06);
+  transition: box-shadow 0.2s;
+  position: relative;
+}
+
+.supplier-dashboard-table-row:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.supplier-dashboard-table-row:hover {
+  box-shadow: 0 4px 20px rgba(32,28,56,0.13);
+}
+
+.supplier-resource-name {
+  font-size: 1.1rem;
+  font-weight: 620;
+  color: #fff;
+}
+
+.supplier-resource-badge {
+  display: inline-block;
+  min-width: 42px;
+  padding: 6px 12px;
+  border-radius: 18px;
+  font-size: 0.97rem;
+  font-weight: 600;
+  text-align: center;
+  background: #295c4c;
+  color: #c0f3e3;
+  margin-right: 5px;
+}
+
+.supplier-resource-badge.low {
+  background: #d6336c;
+  color: #fff;
+}
+.supplier-resource-badge.medium {
+  background: #295c4c;
+  color: #c0f3e3;
+}
+.supplier-resource-badge.high {
+  background: #3b3b4e;
+  color: #fff;
+}
+.supplier-resource-badge.free {
+  background: #117a47;  
+  color: #fff;
+}
+.supplier-resource-badge.busy {
+  background: #ff3864;   
+  color: #fff;
+}
+.supplier-resource-badge.partial {
+  background: #f9a825; /* narandžasta */
+  color: #fff;
+}
+
+.supplier-resource-location {
+  color: #b3b3c6;
+  font-size: 1rem;
+}
+
+/* Akcije (meni sa tri tačke) */
+.supplier-dashboard-actions {
+  position: relative;
+  display: inline-block;
+}
+.supplier-dashboard-action-btn {
+  background: transparent;
+  border: none;
+  color: #b3b3c6;
+  font-size: 1.35rem;
+  cursor: pointer;
+  padding: 5px 8px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.supplier-dashboard-action-btn:hover {
+  background: #2f2b49;
+  color: #fff;
+}
+
+.supplier-dashboard-action-menu {
+  position: absolute;
+  top: 38px;
+  right: 0;
+  background: #232139;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px rgba(32,28,56,0.13);
+  min-width: 112px;
+  z-index: 10;
+  padding: 3px 0;
+  border: 1px solid #31254a;
+}
+.supplier-dashboard-action-menu-item {
+  padding: 10px 16px;
+  color: #e2e2f2;
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border: none;
+  background: none;
+  text-align: left;
+  width: 100%;
+}
+.supplier-dashboard-action-menu-item:hover {
+  background: #2c2840;
+  color: #e83e8c;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .supplier-dashboard-content {
+    max-width: 100%;
+    padding: 0 6px;
+  }
+  .supplier-dashboard-filters {
+    flex-direction: column;
+  }
+  .supplier-dashboard-filter-item {
+    border-right: none;
+    border-bottom: 1px solid #2c2840;
+    padding: 14px 12px;
+  }
+  .supplier-dashboard-filter-item:last-child {
+    border-bottom: none;
+  }
+  .supplier-dashboard-table th,
+  .supplier-dashboard-table td {
+    padding: 12px 6px;
+  }
+}
+
+.supplier-dashboard-filter-select {
+  background: #19182b;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 9px 15px;
+  font-size: 1.07rem;
+  font-weight: 500;
+  outline: none;
+  box-shadow: 0 2px 10px rgba(32,28,56,0.05);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.supplier-dashboard-filter-select:focus {
+  border: 1px solid #ff3864;
+  box-shadow: 0 0 0 2px #ff386444;
+}
+.supplier-dashboard-filter-select option {
+  background: #232139;
+  color: #fff;
+}
+
+@media (max-width: 650px) {
+  .supplier-dashboard-page {
+    margin-left: 70px; 
+    padding: 20px 0 0 0;
+    border: none !important; 
+  }
+  .supplier-dashboard-content {
+    max-width: 100vw;
+    margin: 0;
+    padding: 0 2vw;
+    border: none !important;
+  }
+  .supplier-dashboard-table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .supplier-dashboard-table {
+    min-width: 600px; 
+  }
+}
+
+@media (min-width: 651px) and (max-width: 1024px) {
+  .supplier-dashboard-page {
+    margin-left: 70px;
+    padding: 32px 0 0 0;
+    border: none !important;
+    min-height: 100vh;
+    width: calc(100vw - 70px);
+  }
+  .supplier-dashboard-content {
+    max-width: 94vw;
+    margin: 0;
+    padding: 0 2vw;
+    border: none !important;
+    align-items: center;
+  }
+  .supplier-dashboard-filters {
+    max-width: 800px;
+    margin: 0 auto 28px auto;
+  }
+  .supplier-dashboard-table-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow-x: auto;
+  }
+  .supplier-dashboard-table {
+    min-width: 600px;
+  }
+}

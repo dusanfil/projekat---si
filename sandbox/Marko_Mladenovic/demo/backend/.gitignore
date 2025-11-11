@@ -1,0 +1,42 @@
+## Ignore build outputs
+bin/
+obj/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Rider & VSCode
+.idea/
+.vscode/
+*.sln.iml
+
+## OS-specific files
+.DS_Store
+Thumbs.db
+
+## ASP.NET specific
+wwwroot/lib/
+node_modules/
+dist/
+bower_components/
+
+## Environment settings
+.env
+
+## Logs and database
+*.log
+
+## Publish output
+publish/
+out/
+
+## Docker
+docker-compose.override.yml
+docker-compose.*.yml
+
+## Secrets (optional, if used)
+appsettings.Development.json
+appsettings.*.Secrets.json
